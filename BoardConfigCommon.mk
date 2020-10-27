@@ -31,11 +31,8 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
-TARGET_USES_64_BIT_BINDER := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kona
-TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
@@ -88,10 +85,7 @@ TARGET_MODULE_ALIASES += \
     wlan.ko:qca_cld3_wlan.ko
 
 # Platform
-BOARD_USES_QCOM_HARDWARE := true
-BUILD_WITHOUT_VENDOR := true
 TARGET_BOARD_PLATFORM := kona
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
 
 # Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
@@ -110,18 +104,8 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
-# Bluetooth
-TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
-
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-
-# Dex
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    WITH_DEXPREOPT ?= true
-  endif
-endif
 
 # Display
 TARGET_USES_HWC2 := true
@@ -171,20 +155,9 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     batinfo \
     xrom
 
-# Telephony
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/private \
-    device/qcom/sepolicy/qva/private
-
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/public \
-    device/qcom/sepolicy/qva/public
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
