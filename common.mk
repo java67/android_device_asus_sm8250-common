@@ -77,13 +77,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BluetoothQti
 
-# Boot control
+# Boot
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl.recovery \
-    bootctrl.kona.recovery
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -99,6 +97,7 @@ PRODUCT_PACKAGES += \
 
 # fastbootd
 PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
 # Hotword Enrollement
