@@ -70,13 +70,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     AntHalService
 
-# Audio
-PRODUCT_PACKAGES += \
-    audio.a2dp.default
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    BluetoothQti
+# Board
+TARGET_BOARD_PLATFORM := kona
 
 # Boot
 PRODUCT_PACKAGES += \
@@ -91,10 +86,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-
-# Display
-PRODUCT_PACKAGES += \
-    vendor.display.config@1.12
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -117,6 +108,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
+# QTI Components
+TARGET_COMMON_QTI_COMPONENTS := \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    overlay \
+    perf \
+    telephony \
+    wfd
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -124,15 +127,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # System Helper
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0
-
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml
 
 # Update engine
 PRODUCT_PACKAGES += \
