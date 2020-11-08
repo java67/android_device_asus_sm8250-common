@@ -102,6 +102,10 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
+# Vendor init
+TARGET_INIT_VENDOR_LIB := libinit_asus_sm8250
+TARGET_RECOVERY_DEVICE_MODULES := libinit_asus_sm8250
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
