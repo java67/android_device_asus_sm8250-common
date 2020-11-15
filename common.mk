@@ -66,10 +66,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService
-
 # Board
 TARGET_BOARD_PLATFORM := kona
 
@@ -101,12 +97,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
-    SecureElement \
     com.android.nfc_extras
-
-# Net
-PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
 
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
@@ -133,9 +124,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
