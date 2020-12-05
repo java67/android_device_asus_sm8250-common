@@ -115,10 +115,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# System Helper
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.systemhelper@1.0
-
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \

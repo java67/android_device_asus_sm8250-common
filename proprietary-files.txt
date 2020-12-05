@@ -4,9 +4,6 @@
 product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
 
-# Bluetooth (aptX)
--app/aptxals/aptxals.apk
-
 # Camera
 lib64/DataSet/arch/DIT_List.cfg
 lib64/DataSet/ditSCidGen/msgchk.db
@@ -36,29 +33,3 @@ lib64/libxditk_ditBSP_JNI.so
 
 # Display
 -priv-app/AsusVisualMaster/AsusVisualMaster.apk
-
-# Hotword Enrollment
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
-
-# Power Off Alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk
-
-# Public libraries
-product/etc/public.libraries-qti.txt
-product/lib/libupdateprof.qti.so
-product/lib/vendor.qti.qspmhal@1.0.so
-product/lib64/libupdateprof.qti.so
-product/lib64/vendor.qti.qspmhal@1.0.so
-
-# Secure
--product/app/com.qualcomm.qti.services.secureui/com.qualcomm.qti.services.secureui.apk
-product/lib64/libseccamservice.so
-product/lib64/libsecureui_svcsock_system.so
-product/lib64/libsecureuisvc_jni.so
-product/lib64/vendor.qti.hardware.tui_comm@1.0.so
--product/priv-app/seccamservice/seccamservice.apk
-
-# System Helper
--product/app/com.qualcomm.qti.services.systemhelper/com.qualcomm.qti.services.systemhelper.apk
-product/lib64/libsystemhelper_jni.so
