@@ -105,7 +105,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     display \
-    gps \
     overlay \
     perf \
     telephony \
