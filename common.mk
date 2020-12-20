@@ -66,6 +66,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
 
+# Bluetooth
+TARGET_USE_QTI_BT_STACK := false
+
 # Board
 TARGET_BOARD_PLATFORM := kona
 
