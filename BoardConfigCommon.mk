@@ -60,6 +60,12 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
+# Gestures
+TARGET_TAP_TO_WAKE_NODE := /proc/driver/dclick
+TARGET_DRAW_M_NODE := /proc/driver/gesture_m
+TARGET_DRAW_V_NODE := /proc/driver/gesture_v
+TARGET_DRAW_W_NODE := /proc/driver/gesture_w
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
